@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ profile.name }}</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+
+    <style>
+    body {
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+        background: linear-gradient(135deg, #5a0f2a, #8B1E3F);
+        color: white;
+    }
+
+    .container {
+        width: 85%;
+        margin: auto;
+        padding: 30px;
+    }
+
+    .header {
+        text-align: center;
+    }
+
+    .name {
+        font-family: 'Pacifico', cursive;
+        font-size: 48px;
+    }
+
+    .role {
+        font-size: 26px;
+        color: #F1ABB9;
+    }
+
+    .profile-pic img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+        object-position: center 60%;
+        border: 3px solid #F1ABB9;
+        margin-top: 15px;
+    }
+
+    .profile-pic img:hover {
+        box-shadow: 0 0 20px rgba(241,171,185,0.6);
+    }
+
+    .contact {
+        margin-top: 10px;
+        font-size: 14px;
+    }
+
+    .contact a {
+        color: #F1ABB9;
+        margin: 0 10px;
+    }
+
+    h2 {
+        margin-top: 50px;
+        border-bottom: 2px solid #F1ABB9;
+        padding-bottom: 5px;
+        color: #F1ABB9;
+    }
+
+    .row {
+        display: flex;
+        justify-content: space-between;
+        margin: 30px 0;
+        gap: 30px;
+    }
+
+    .row.reverse {
+        flex-direction: row-reverse;
+    }
+
+    .text {
+        flex: 1;
+    }
+
+    /* FLOATING IMAGE */
+    .image {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .image img {
+        width: 85%;
+        max-height: 260px;
+        object-fit: contain;
+        border-radius: 20px;
+        animation: float 4s ease-in-out infinite;
+        filter: drop-shadow(0 0 25px rgba(241,171,185,0.4));
+    }
+
+    .image img:hover {
+        transform: scale(1.05);
+    }
+
+    @keyframes float {
+        0% { transform: translateY(0px); }
+        50% { transform: translateY(-10px); }
+        100% { transform: translateY(0px); }
+    }
+
+    /* CARD */
+    .card {
+    background: rgba(241, 171, 185, 0.12);
+    padding: 20px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    transition: 0.3s;
+
+    .highlight-text {
+    color: #FFD6E0;   /* soft glowing pink */
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    }
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 25px rgba(241,171,185,0.4);
+}
+
+    /* FLEX CARD INSIDE */
+    .card-flex {
+        display: flex;
+        gap: 20px;
+    }
+
+    .card-left {
+        flex: 2;
+    }
+
+    .card-right {
+        flex: 1;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        align-content: flex-start;
+    }
+
+    .desc {
+        margin-top: 8px;
+        color: #ddd;
+        font-size: 14px;
+    }
+
+    /* SKILLS */
+    .skill {
+    background: transparent;
+    border: 1px solid #F1ABB9;
+    color: #F1ABB9;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 12px;
+    transition: 0.3s;
+}
+
+.skill:hover {
+    background: #F1ABB9;
+    color: #5a0f2a;
+    transform: scale(1.05);
+}
+
+    /* BUTTONS */
+    .button {
+    display: inline-block;
+    margin-top: 10px;
+    margin-right: 8px;
+    padding: 6px 14px;
+    border-radius: 10px;
+    font-size: 12px;
+    text-decoration: none;
+    background: #F1ABB9;
+    color: #5a0f2a;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.button:hover {
+    background: white;
+    transform: translateY(-2px);
+    box-shadow: 0 0 15px rgba(241,171,185,0.6);
+}
+
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- HEADER -->
+    <div class="header">
+        <div class="name">{{ profile.name }}</div>
+        <div class="role">{{ profile.role }}</div>
+
+        <div class="profile-pic">
+            <img src="/static/profile.jpeg">
+        </div>
+
+        <div class="contact">
+            {{ profile.contact.phone }} |
+            {{ profile.contact.email }} |
+            <a href="{{ profile.contact.linkedin }}">LinkedIn</a> |
+            <a href="{{ profile.contact.resume }}">Download Resume</a>
+        </div>
+    </div>
+
+    <!-- ABOUT -->
+    <h2>About</h2>
+    <div class="row">
+        <div class="text card">
+            {% for para in profile.about %}
+            <p class="about-line">{{ para }}</p>
+            {% endfor %}
+        </div>
+        <div class="image">
+            <img src="/static/project1.png">
+        </div>
+    </div>
+
+    <!-- EDUCATION -->
+    <h2>Education</h2>
+    {% for edu in profile.education %}
+    <div class="card">{{ edu }}</div>
+    {% endfor %}
+
+    <!-- EXPERIENCE -->
+    <h2>Experience</h2>
+    {% for exp in profile.experience %}
+    <div class="row">
+        <div class="text card">
+            <div class="card-flex">
+
+                <div class="card-left">
+                    <b>{{ exp.title }}</b>
+                    <p class="desc">{{ exp.description }}</p>
+
+                    <a href="{{ exp.drive }}" class="button">View Work</a>
+                </div>
+
+                <div class="card-right">
+                    {% for skill in exp.skills %}
+                    <span class="skill">{{ skill }}</span>
+                    {% endfor %}
+                </div>
+
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+
+    <!-- PROJECTS -->
+    <h2>Projects</h2>
+    {% for project in profile.projects %}
+    <div class="row">
+        <div class="text card">
+            <div class="card-flex">
+
+                <div class="card-left">
+                    <b>{{ project.name }}</b>
+                    <p class="desc">{{ project.description }}</p>
+
+                    {% if project.drive %}
+                    <a href="{{ project.drive }}" class="button">View Work</a>
+                    {% endif %}
+                </div>
+
+                <div class="card-right">
+                    {% for skill in project.skills %}
+                    <span class="skill">{{ skill }}</span>
+                    {% endfor %}
+                </div>
+
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+
+    <!-- PUBLICATION -->
+    <h2>Publication</h2>
+<div class="card">
+
+    <b>{{ profile.publication.title }}</b>
+
+    <div>
+        <a href="{{ profile.publication.link }}" class="button">
+            View Paper
+        </a>
+    </div>
+
+</div>
+
+    <!-- LANGUAGES -->
+    <h2>Languages</h2>
+    <div class="card">
+        {% for lang in profile.languages %}
+        <span class="skill highlight-text">{{ lang }}</span>
+        {% endfor %}
+    </div>
+
+    <!-- HOBBIES -->
+    <h2>Hobbies</h2>
+    <div class="card">
+        {% for hobby in profile.hobbies %}
+        <span class="skill highlight-text">{{ hobby }}</span>
+        {% endfor %}
+    </div>
+
+</div>
+
+</body>
+</html>
