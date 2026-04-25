@@ -207,8 +207,7 @@
         <div class="contact">
             {{ profile.contact.phone }} |
             {{ profile.contact.email }} |
-            <a href="{{ profile.contact.linkedin }}">LinkedIn</a> |
-            <a href="{{ profile.contact.resume }}">Download Resume</a>
+            <a href="{{ profile.contact.linkedin }}">LinkedIn</a> 
         </div>
     </div>
 
@@ -242,7 +241,11 @@
                     <b>{{ exp.title }}</b>
                     <p class="desc">{{ exp.description }}</p>
 
-                    <a href="{{ exp.drive }}" class="button">View Work</a>
+                    {% if exp.drive %}
+                    <a href="{{ exp.drive }}" class="button" target="_blank">View Work</a>
+                    {% else %}
+                    <span class="skill">Ongoing</span>
+                    {% endif %}
                 </div>
 
                 <div class="card-right">

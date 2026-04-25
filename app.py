@@ -11,8 +11,7 @@ def home():
         "contact": {
             "phone": "+91-9361428183",
             "email": "divyachandradv@gmail.com",
-            "linkedin": "https://www.linkedin.com/in/divya-chandra-r-969a911b2",
-            "resume": "#"
+            "linkedin": "https://www.linkedin.com/in/divya-chandra-r-969a911b2"
         },
 
         "about": [
@@ -33,25 +32,31 @@ def home():
 
         "experience": [
             {
-                "title": "Intern - NeuroMaterials Lab, TUM - (march 2025 - march 2026)",
-                "description": "Designing electrochemical setup for glass electrode and characterization of magnetic nanoparticles for brain implants.",
+                "title": "Master Thesis - Photonics Laboratory, NAIST, Japan (April 2026 - Present)",
+                "description": "Design, fabrication of biocompatible emission filter for cmos image sensor and performing mice brain imaging",
+                "skills": ["Microfabrication", "cmos filter design", "biocompatibility testing", "Cadence virtuoso"]
+    
+            },
+            {
+                "title": "Intern - NeuroMaterials Lab, TUM, Germany (March 2025 - March 2026)",
+                "description": "Designing electrochemical setup for glass electrode and characterization of magnetic nanoparticles for remanence effect to use for brain stimulation",
                 "skills": ["EIS experimentation", "Analysis of Impedence", "CAD modelling"],
                 "drive": "https://drive.google.com/drive/folders/1K5HwTzNV4_eZM_NyZFkHNfVf6Rmh_kf-?usp=drive_link"
             },
             {
-                "title": "Project Assistant - Computational Neuroscience Lab, IIT Madras - (February 2024 – september 2024) ",
+                "title": "Project Assistant - Computational Neuroscience Lab, IIT Madras (February 2024 – September 2024) ",
                 "description": "Development of android application in kotlin aimed at collecting patients data of Parkinson’s disease through speech, walk pattern and the IGT(decision making) experiments, to apply data analysis in real-world healthcare challenges",
-                "skills": ["Android studio", "Kotlin", "Data Analysis", "mobile hardware access"],
+                "skills": ["Android studio", "Kotlin", "Data Analysis", "mobile hardware access", "working with pd patients"],
                 "drive": "https://drive.google.com/drive/folders/12Ze97YOYhUpWGaA3m9CvrIWkXdTlQjLU?usp=drive_link"
             },
             {
-                "title": "Research Intern - IIT Madras - (May 2023 – January 2024) ",
+                "title": "Research Intern - IIT Madras (May 2023 – January 2024) ",
                 "description": "Real time detection of Heavy metals in various specimens via Bio-compatible electrodes using electrochemistry with deposition and voltammetry techniques",
-                "skills": ["3-elctrode system", "voltammetry experiments", "electrochemistry"],
+                "skills": ["3-elctrode system", "voltammetry experiments", "electrochemistry" , "synthetic urine preparation"],
                 "drive": "https://drive.google.com/drive/folders/1fz41Zx3OS9CyEOZPwSufnhmjgZCuO3yn?usp=drive_link"
             },
             {
-                "title": "AR/VR Trainee - AllReal - (March 2022 - April 2022)",
+                "title": "AR/VR Trainee - AllReal (March 2022 - April 2022)",
                 "description": "3D model designing for VR platforms",
                 "skills": ["Blender", "Fusion360"],
                 "drive": "https://drive.google.com/drive/folders/1PUf_QYT2adyGKA89qduXCdqHTgCUMuiA?usp=drive_link"
@@ -91,7 +96,7 @@ def home():
     "link": "https://ijaem.net/issue_dcp/Literature%20review%20Onmultiple%20Disorder%20Detection%20by%20Gait%20Analysis%20Using%20Machine%20Learning.pdf"
 },
 
-        "languages": ["Tamil", "English", "Hindi"],
+        "languages": ["Tamil", "English"],
 
         "hobbies": ["Sketching","Reading"]
     }
