@@ -66,7 +66,7 @@ def home():
         "projects": [
             {
                 "name": "Farmers Market - Neuro inspired system engineering module MSNE,TUM  ",
-                "description": "Alternating Unilateral Reaching With Real Objects for Upper-Limb Rehabilitation After Hemiplegia. Alternating unilateral reaching with real objects for upper-limb rehabilitation after hemiplegia. A fun game asking the patient to sort the fruits and veggie in basket aiming at collecting their hand move data and cognition speed of noticing the hand and products to sort",
+                "description": "Alternating unilateral reaching with real objects for upper-limb rehabilitation after hemiplegia. A fun visual game asking the patient to sort the fruits and veggie in basket aiming on collecting their hand movement data, while measuring their cognition level of noticing the indicated left or right hand and remembering the products to sort",
                 "skills": ["embedded system","pygame designing","python"],
                 "drive": "https://drive.google.com/drive/folders/1HYizwShqtUFD0_i9ImkRj9WB2x2trR6J?usp=drive_link"
                 
