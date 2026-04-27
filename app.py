@@ -33,13 +33,13 @@ def home():
         "experience": [
             {
                 "title": "Master Thesis - Photonics Laboratory, NAIST, Japan (April 2026 - Present)",
-                "description": "Design, fabrication of biocompatible emission filter for cmos image sensor and performing mice brain imaging",
+                "description": "Designing emission filter patterns for cmos-image sensor; microfabricating it by clean room processes; characterize for biocompatibility and testing its performance through in-vivo or in-vitro brain imaging. ",
                 "skills": ["Microfabrication", "cmos filter design", "biocompatibility testing", "Cadence virtuoso"]
     
             },
             {
                 "title": "Intern - NeuroMaterials Lab, TUM, Germany (March 2025 - March 2026)",
-                "description": "Designing electrochemical setup for glass electrode and characterization of magnetic nanoparticles for remanence effect to use for brain stimulation",
+                "description": "Electrochemical setup design for bottom mounted glass electrode & magnetic nanoparticle characterization for remanence effect with EIS",
                 "skills": ["EIS experimentation", "Analysis of Impedence", "CAD modelling"],
                 "drive": "https://drive.google.com/drive/folders/1K5HwTzNV4_eZM_NyZFkHNfVf6Rmh_kf-?usp=drive_link"
             },
@@ -57,7 +57,7 @@ def home():
             },
             {
                 "title": "AR/VR Trainee - AllReal (March 2022 - April 2022)",
-                "description": "3D model designing for VR platforms",
+                "description": "Printing and designing 3D models for VR platform",
                 "skills": ["Blender", "Fusion360"],
                 "drive": "https://drive.google.com/drive/folders/1PUf_QYT2adyGKA89qduXCdqHTgCUMuiA?usp=drive_link"
             }
@@ -66,14 +66,14 @@ def home():
         "projects": [
             {
                 "name": "Farmers Market - Neuro inspired system engineering module MSNE,TUM  ",
-                "description": "Alternating Unilateral Reaching With Real Objects for Upper-Limb Rehabilitation After Hemiplegia",
+                "description": "Alternating Unilateral Reaching With Real Objects for Upper-Limb Rehabilitation After Hemiplegia. Alternating unilateral reaching with real objects for upper-limb rehabilitation after hemiplegia. A fun game asking the patient to sort the fruits and veggie in basket aiming at collecting their hand move data and cognition speed of noticing the hand and products to sort",
                 "skills": ["embedded system","pygame designing","python"],
                 "drive": "https://drive.google.com/drive/folders/1HYizwShqtUFD0_i9ImkRj9WB2x2trR6J?usp=drive_link"
                 
             },
             {
                 "name": "The perfect handshake - Neuro inspired system engineering module MSNE,TUM",
-                "description": "Measuring confidence through handshake using eskin built with pressure and imu sensors to be placed in glove like setup, finding difference between weak, strong, perfect handshake ",
+                "description": "Measuring confidence of handshake using Eskin built with pressure and imu sensors to be placed in glove like setup, finding difference between weak, strong, perfect handshake of the opponent allowing robot-human interaction more intuitive",
                 "skills": ["vibrotactile actuators", "e-skin","signal classification","paper research", "team work"],
                 "drive": "https://drive.google.com/drive/folders/18vc9JR6uY9kRWsA9VWYGWGKNXOhYIi-y?usp=drive_link"
             },
