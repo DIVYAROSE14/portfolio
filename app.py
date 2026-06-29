@@ -11,7 +11,7 @@ def home():
         "contact": {
             "phone": "+91-9361428183",
             "email": "divyachandradv@gmail.com",
-            "linkedin": "https://www.linkedin.com/in/divya-chandra-r-969a911b2"
+            "linkedin": "https://www.linkedin.com/in/divyachandra-ravichandran-969a911b2/"
         },
 
         "about": [
